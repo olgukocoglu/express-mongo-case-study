@@ -8,12 +8,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
 
-if (process.env.NODE_ENV !== 'production') {
-  const dotenv = require('dotenv');
-  dotenv.config();
-}
+const dotenv = require('dotenv');
+dotenv.config();
 
-mongoose.connect(process.env.MONGO_DB_CONN_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err, db)=>{
+mongoose.connect(process.env.MONGO_DB_CONN_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err)=>{
   if(err)
       console.error("Error connecting to the Db: " + err.message);
   else
@@ -36,7 +34,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
