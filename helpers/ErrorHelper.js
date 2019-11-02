@@ -23,7 +23,7 @@ module.exports.CheckErrors = function(query) {
         err.msg = "Start date can not be later than end date."
     }
 
-    else if (!query.minCount === null) {
+    else if (query.minCount === undefined) {
         err.code = -6
         err.msg = "Min count can not be empty."
     }
@@ -32,7 +32,7 @@ module.exports.CheckErrors = function(query) {
         err.msg = "Min count must be a positive int or 0."
     }
 
-    else if (!query.maxCount === null) {
+    else if (query.maxCount === undefined) {
         err.code = -8
         err.msg = "Max count can not be empty."
     }

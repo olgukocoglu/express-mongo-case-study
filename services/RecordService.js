@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 const records = mongoose.model('records');
 
-module.exports.GetRecords = function(query) {
-    return new Promise(function(resolve){
-        records.aggregate([
+module.exports.GetRecords = async function(query) {
+        return await records.aggregate([
             {
                 $addFields: {
                     totalCount: {
@@ -32,8 +31,7 @@ module.exports.GetRecords = function(query) {
             },
         ], function (err, records) {
             if(err)
-                resolve({ code: -100, msg: "Unknown Error: " + err.message });
-            resolve({ code: 0, msg: "Success", records });
+                return { code: -100, msg: "Unknown Error: " + err.message };
+            return { code: 0, msg: "Success", records };
         })
-    })
 }
