@@ -3,7 +3,7 @@ This is a simple RESTful API developed with Express.js and MongoDB.
 The url for the API is: https://express-mongo-case-study.herokuapp.com/
 
 ## API Endpoint
-There is only one endpoint for the API which accepts POST method
+There is only one endpoint for the API which accepts POST method  
 The url for the endpoint is: https://express-mongo-case-study.herokuapp.com/GetRecords
 
 ### Example Request Payload for the Endpoint
