@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  express-mongo-case-study.api:
+    image: express-mongo-case-study.api
+    container_name: express-mongo-case-study.api
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGO_DB_CONN_URL=
