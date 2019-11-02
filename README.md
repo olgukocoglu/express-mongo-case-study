@@ -43,12 +43,13 @@ You can check the API locally by installing and running through docker or npm. A
 1. Install Docker to your OS,
 2. Clone or download the repository,
 3. Replace the $CONNECTION_STRING with the db connection string in the docker-compose.yml file,
-4. Go to the repository directory with terminal.
+4. Go to the repository directory with terminal,
 5. Type ```docker-compose up``` in terminal.
 
 ### With NPM
-1. Install Node.js to your OS.
-2. Clone or download the repository.
-3. Go to the repository directory with terminal.
-4. Type ```npm install``` in terminal.
+1. Install Node.js to your OS,
+2. Clone or download the repository,
+3. Replace the $CONNECTION_STRING with the db connection string in the .env file,
+3. Go to the repository directory with terminal,
+4. Type ```npm install``` in terminal,
 5. Type ```npm start``` in terminal.
