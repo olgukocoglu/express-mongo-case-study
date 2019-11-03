@@ -7,9 +7,6 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
 
-const dotenv = require('dotenv');
-dotenv.config();
-
 mongoose.connect(process.env.MONGO_DB_CONN_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err)=>{
   if(err)
       console.error("Error connecting to the Db: " + err.message);

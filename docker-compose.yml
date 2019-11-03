@@ -8,4 +8,4 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - MONGO_DB_CONN_URL=
+      - MONGO_DB_CONN_URL=$CONNECTION_STRING

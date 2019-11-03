@@ -49,7 +49,7 @@ You can check the API locally by installing and running through docker or npm. A
 ### With NPM
 1. Install Node.js to your OS,
 2. Clone or download the repository,
-3. Replace the $CONNECTION_STRING with the db connection string in the .env file,
+3. Replace the $CONNECTION_STRING with the db connection string in the production.env file,
 3. Go to the repository directory with terminal,
 4. Type ```npm install``` in terminal,
 5. Type ```npm start``` in terminal.
