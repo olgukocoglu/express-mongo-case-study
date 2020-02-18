@@ -16,7 +16,7 @@ The url for the endpoint is: https://express-mongo-case-study.herokuapp.com/GetR
 }
 ```
 
-### Example Respond Payload for the Endpoint
+### Example Response Payload for the Endpoint
 ```
 {
   "code":0,
